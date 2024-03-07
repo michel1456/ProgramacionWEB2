@@ -1,0 +1,23 @@
+/* Selecciona la clase jumbotron y le da un color de fondo verde claro */
+.jumbotron {
+    background-color: #8fc88f;
+  }
+  
+  /* Selecciona la clase display-4 y le da un color de texto verde oscuro y un tamaño de fuente más pequeño */
+  .display-4 {
+    color: #0c190c;
+    font-size: 40px;
+  }
+  
+  /* Selecciona la clase lead y le da un color de texto gris y un margen a la derecha */
+  .lead {
+    color: #261b1b;
+    margin-right: 100px;
+  }
+  
+  /* Selecciona la etiqueta img y le da un borde redondeado y un tamaño más pequeño */
+  img {
+    border-radius: 40px;
+    width: 500px;
+  }
+  

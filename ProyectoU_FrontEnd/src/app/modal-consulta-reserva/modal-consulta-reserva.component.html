@@ -1,0 +1,59 @@
+<button class="btn btn-primary" (click)="abrirConsultor()">Consultar Reserva</button>
+
+<div class="modal" tabindex="-1" id="consultor-reserva">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Consulta tu reserva:</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" (click)="cerrarConsultor()" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form>
+          <div class="mb-3">
+            <label class="form-label" for="cedula">Cédula: </label>
+            <input placeholder="Ingrese su cédula" type="number" class="form-control" id="cedula" name="cedula" [(ngModel)]="cedula">
+          </div>
+          <div class="modal-footer">
+            <!-- Enlaza el botón con la función consultarReserva() -->
+            <button type="button" class="btn btn-primary" (click)="consultarReserva(cedula)">Consultar Reserva</button>  
+          </div>
+        </form>
+        <div class="table-responsive">
+          <table class="table">
+            <thead>
+              <tr>
+                <th scope="col"># Reserva</th>
+                <th scope="col">Estado</th>
+                <th scope="col">Fecha Reserva</th>
+                <th scope="col"># Asiento</th>
+                <th scope="col">Cédula</th>
+                <th scope="col"># de viaje</th>
+                <th scope="col">Destino</th>
+                <th scope="col">Fecha de salida</th>
+                <th scope="col">Hora de salida</th>
+                <th scope="col">Valor de pasaje</th>
+                <th scope="col">¡Cancela tu reserva!</th>
+              </tr>
+            </thead>
+            <tbody>
+              <!-- Itera sobre las reservas y muestra los datos en la tabla -->
+              <tr *ngFor="let reserva of reservas">
+                <td>{{reserva.idReserva}}</td>
+                <td>{{reserva.estado}}</td>
+                <td>{{reserva.fechaReserva}}</td>
+                <td>{{reserva.numeroPuesto}}</td>
+                <td>{{reserva.cedula.cedula}}</td>
+                <td>{{reserva.id_lista_disponibilidad.idListaDisponibilidad}}</td>
+                <td>{{reserva.id_lista_disponibilidad.destino}}</td>
+                <td>{{reserva.id_lista_disponibilidad.fecha}}</td>
+                <td>{{reserva.id_lista_disponibilidad.horaSalida}}</td>
+                <td>{{reserva.id_lista_disponibilidad.totalPagar}}</td>
+                <td><button type="submit" class="btn btn-primary" (click)="cancelarReservaUsuario(reserva.idReserva)">Cancelar</button></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

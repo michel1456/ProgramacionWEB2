@@ -1,0 +1,24 @@
+/* Este es un comentario en CSS. Puedes usarlo para explicar tu código */
+
+/* Selecciona la clase navbar-container y le da un color de fondo azul claro */
+.navbar-container {
+    background-color: #cceeff;
+  }
+  
+  /* Selecciona la clase navbar-brand y le da un color de texto azul oscuro y un tamaño de fuente más grande */
+  .navbar-brand {
+    color: #4CAF50;
+    font-size: 24px;
+  }
+  
+  /* Selecciona la clase nav-link y le da un color de texto gris y un margen a la izquierda */
+  .nav-link {
+    color: #4CAF50;
+    margin-left: 20px;
+  }
+  
+  /* Selecciona la clase nav-item cuando el cursor está sobre ella y le da un color de fondo gris claro */
+  .nav-item:hover {
+    background-color: #f0f0f0;
+  }
+  

@@ -1,0 +1,29 @@
+<div class="modal" tabindex="-1" id="modificador_reserva">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Modificar los datos de la reserva</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" (click)="cerrarModificador()" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form>
+          <div class="mb-3">
+            <label class="form-label" for="numero_reserva">Número de reserva:</label>
+            <input type="text" class="form-control" id="numero_reserva" name="numero_reserva" [(ngModel)]="reserva.idReserva">
+          </div>
+          <div class="mb-3">
+            <label class="form-label" for="numero_puesto">Número de puesto:</label>
+            <input type="text" class="form-control" id="numero_puesto" name="numero_puesto" [(ngModel)]="reserva.numeroPuesto">
+          </div>
+          <div class="mb-3">
+            <label class="form-label" for="estado">¿Pagó la reserva?:</label>
+            <input type="checkbox" class="form-check-input" id="estado" name="estado" [(ngModel)]="reserva.estado">
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-primary" (click)="modificarReserva()">Actualizar datos</button>  
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
